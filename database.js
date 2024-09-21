@@ -11,5 +11,5 @@ mongoose.connection.on("error", () => {
 });
 
 //CONECTANDO A LA BASE DE DATOS
-//mongoose.connect(process.env);
+mongoose.connect(process.env.MONGO_URI);
 console.log(process.env.MONGO_URI); //Vemos todo lo que tiene

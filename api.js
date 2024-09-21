@@ -4,6 +4,7 @@ import actorRouter from "./routes/actorRoutes.js";
 const PORT = 8000;
 
 const api = express();
+api.use(express.json());
 api.use("/actors", actorRouter); //registrando las rutas de actorRouter ("/actors") es su prefijo ya que se repite en todas las rutas del crud
 
 api.get("/test", (req, res) => {
