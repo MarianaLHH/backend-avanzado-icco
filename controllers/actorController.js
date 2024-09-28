@@ -29,11 +29,6 @@ const getById = async (req, res) => {
 };
 //....................CREATE-POST........................
 const create = async (req, res) => {
-  if (!req.body.gender || Number.isNaN(+req.body.gender)) {
-    return res.status(400).json({
-      msg: "Body con formato incorrecto falta propiedad gender",
-    });
-  }
   try {
     const actor = await Actor.create(req.body);
     return res.json({
