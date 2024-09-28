@@ -17,6 +17,11 @@ api.get("/test", (req, res) => {
   });
 });
 
-api.listen(8000, () => {
+api.get("/", (req, res) => {
+  return res.json({
+    msg: "API Funcionando",
+  });
+});
+api.listen(PORT, () => {
   console.log(`Api corriendo en el puerto ${PORT}`);
 });
